@@ -9,15 +9,15 @@
     "./agents/morning-content-brief/agent.md": {
       "kind": "agent",
       "id": "agent_01SFZoRwedmga1NnWqkVRCcr",
-      "version": "2",
-      "hash": "11132199861884a3bdab567a50441055",
-      "remote_hash": "a417b09f7d61c99e28d2e159dd7a7839"
+      "version": "3",
+      "hash": "5b4f4366b5a769f825a59ac867d61f39",
+      "remote_hash": "228fce3a26f5b4e7f22c56e9cfee61b6"
     },
     "./agents/morning-content-brief/deployment-weekday.yaml": {
       "kind": "deployment",
       "id": "depl_01D1vPDSw6hG7oCkhvC45yaU",
-      "hash": "c36073b57afd78806a4ee0b7cefa8240",
-      "remote_hash": "c36073b57afd78806a4ee0b7cefa8240"
+      "hash": "e65ac9d75691d7c102931d09c0745301",
+      "remote_hash": "e65ac9d75691d7c102931d09c0745301"
     },
     "./agents/morning-content-brief/environment.yaml": {
       "kind": "environment",
