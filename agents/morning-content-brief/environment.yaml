@@ -1,0 +1,15 @@
+# Environment for the morning content brief agent.
+#
+# Networking is unrestricted because the agent's job is open-ended trend
+# research across YouTube, TikTok, Instagram and the creator-economy press,
+# and with `limited` networking web_search and web_fetch return nothing from
+# hosts that are not listed in advance. No credentials are attached to this
+# environment, so there is nothing in the sandbox to leak.
+#
+# When you add a vault with real credentials (Notion, Blotato, vidiq), switch
+# to `limited` and list the hosts the agent must reach. See README.md.
+name: morning-content-brief
+config:
+  type: cloud
+  networking:
+    type: unrestricted

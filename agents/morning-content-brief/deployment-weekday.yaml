@@ -1,0 +1,56 @@
+# Scheduled deployment: weekdays at 06:00 US Eastern.
+# Each firing creates a fresh session from the agent and environment beside
+# this file. Change `schedule.expression` / `schedule.timezone` to taste.
+#
+# Budget is a hard cap per run, in cents: "200" = $2.00. A typical run should
+# land well under $1. Raise it if runs pause with stop_reason budget_reached.
+name: morning-content-brief-weekday
+agent: ./agent.md
+environment_id: ./environment.yaml
+schedule:
+  type: cron
+  expression: "0 6 * * 1-5"
+  timezone: America/New_York
+budget:
+  type: limit
+  max_list_cost:
+    amount: "200"
+    currency: USD
+initial_events:
+  - type: user.define_outcome
+    description: |
+      Write today's VNMSFX morning brief to /mnt/session/outputs/brief-YYYY-MM-DD.md
+      (today's date, US Eastern), following the vnmsfx-skit-pipeline skill and the
+      output template it specifies. Then end with the "Pick one" section pasted in
+      your final message.
+    max_iterations: 2
+    rubric:
+      type: text
+      content: |
+        # Rubric: VNMSFX morning brief
+        Starter rubric. Each criterion is graded independently. Tune after the first week.
+
+        1. A file exists at /mnt/session/outputs/brief-<today's date in US Eastern, YYYY-MM-DD>.md.
+        2. The file follows the output template in the skill: a "Pick one" section first,
+           then "What moved overnight", then one "Concept N" section per concept, then
+           "Cut from today's list", then "Research notes".
+        3. "Pick one" lists between 3 and 5 concepts, strongest first, each with a one-line
+           hook, a named anchor with a date, and a sound-off verdict of PASS.
+        4. Every concept section contains all eight labelled parts: Premise, Anchor, Share test,
+           Script, Shot list, Sound-off, Captions, Production.
+        5. Every Anchor and every bullet in "What moved overnight" cites a date and a link to an
+           original page (not a search results page). No fact in the brief is uncited.
+        6. Every Script is written in 15-second shot blocks with a VISUAL line per block, has
+           no more than 7 spoken lines and no more than 3 physical beats, and runs 30 to 45
+           seconds in total.
+        7. Every Shot list has exactly 9 numbered shots, each with size and angle, camera move,
+           frame contents and a light or colour note, and no two consecutive shots share size
+           and angle.
+        8. Every Sound-off section says PASS and gives one sentence per script block
+           describing what the viewer learns with the audio muted. No concept with a CUT
+           verdict appears in "Pick one".
+        9. The concepts are distinct from one another: no two share the same premise shape or
+           the same anchor.
+        10. No concept depends on impersonating a real private individual or on a real brand's
+            logo or trademark appearing on screen.
+        11. The agent's final message contains the "Pick one" section verbatim from the file.
