@@ -1,0 +1,7 @@
+# Vault holding the credentials the morning-content-brief agent uses.
+# The vidIQ OAuth credential is added by scripts/connect-vidiq.sh, never stored in git.
+type: vault
+display_name: morning-content-brief
+metadata:
+  owner: vnmsfx
+  purpose: morning-content-brief

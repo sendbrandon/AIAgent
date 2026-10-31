@@ -9,15 +9,15 @@
     "./agents/morning-content-brief/agent.md": {
       "kind": "agent",
       "id": "agent_01SFZoRwedmga1NnWqkVRCcr",
-      "version": "1",
-      "hash": "9331b94e651c61599d46484ff61e9d49",
-      "remote_hash": "ee5927a005a52b36e4888ad1d3be98c4"
+      "version": "2",
+      "hash": "11132199861884a3bdab567a50441055",
+      "remote_hash": "a417b09f7d61c99e28d2e159dd7a7839"
     },
     "./agents/morning-content-brief/deployment-weekday.yaml": {
       "kind": "deployment",
       "id": "depl_01D1vPDSw6hG7oCkhvC45yaU",
-      "hash": "5915b9329abad944fca73c91f213eafd",
-      "remote_hash": "5915b9329abad944fca73c91f213eafd"
+      "hash": "c36073b57afd78806a4ee0b7cefa8240",
+      "remote_hash": "c36073b57afd78806a4ee0b7cefa8240"
     },
     "./agents/morning-content-brief/environment.yaml": {
       "kind": "environment",
@@ -30,6 +30,12 @@
       "id": "skill_01LHyuDrDqj2xrT9wkQsk1tp",
       "version": "skver_019Tk6RorrrttSPTUyhSy4zk",
       "hash": "edb04f72738211b63c9021524031d7bd"
+    },
+    "./agents/morning-content-brief/vault.yaml": {
+      "kind": "vault",
+      "id": "vlt_011CgafTAQfjm6K8eL97W9KG",
+      "hash": "e538361bfec0c9be71b0aa11da82c9e2",
+      "remote_hash": "e538361bfec0c9be71b0aa11da82c9e2"
     }
   }
 }

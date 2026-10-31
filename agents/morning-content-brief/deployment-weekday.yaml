@@ -2,11 +2,15 @@
 # Each firing creates a fresh session from the agent and environment beside
 # this file. Change `schedule.expression` / `schedule.timezone` to taste.
 #
-# Budget is a hard cap per run, in cents: "200" = $2.00. A typical run should
-# land well under $1. Raise it if runs pause with stop_reason budget_reached.
+# Budget is a hard cap per run, in cents: "400" = $4.00. Test runs on
+# 2026-10-31 cost $2.08 (web only) and $2.34 (with vidIQ), both cut off at the
+# old $2 cap during the grader pass. Raise it if runs pause with stop_reason
+# budget_reached.
 name: morning-content-brief-weekday
 agent: ./agent.md
 environment_id: ./environment.yaml
+vault_ids:
+  - ./vault.yaml
 schedule:
   type: cron
   expression: "0 6 * * 1-5"
@@ -14,7 +18,7 @@ schedule:
 budget:
   type: limit
   max_list_cost:
-    amount: "200"
+    amount: "400"
     currency: USD
 initial_events:
   - type: user.define_outcome
