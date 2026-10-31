@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "origin": {
+    "base_url": "https://api.anthropic.com",
+    "organization_id": "f8ae1349-d7a9-4a8a-bf0f-70bab6855eda",
+    "workspace_id": "wrkspc_01SQCFprCL8c4sVwXSafc1dS"
+  },
+  "resources": {
+    "./agents/morning-content-brief/agent.md": {
+      "kind": "agent",
+      "id": "agent_01SFZoRwedmga1NnWqkVRCcr",
+      "version": "1",
+      "hash": "9331b94e651c61599d46484ff61e9d49",
+      "remote_hash": "ee5927a005a52b36e4888ad1d3be98c4"
+    },
+    "./agents/morning-content-brief/deployment-weekday.yaml": {
+      "kind": "deployment",
+      "id": "depl_01D1vPDSw6hG7oCkhvC45yaU",
+      "hash": "5915b9329abad944fca73c91f213eafd",
+      "remote_hash": "5915b9329abad944fca73c91f213eafd"
+    },
+    "./agents/morning-content-brief/environment.yaml": {
+      "kind": "environment",
+      "id": "env_01UWb9jsGjrVy2MwuXHCYBQh",
+      "hash": "54a1d89cf1c493e9399db27b2f8e39db",
+      "remote_hash": "01e470121aaefaae6e32799874aecc29"
+    },
+    "./agents/morning-content-brief/skills/vnmsfx-skit-pipeline": {
+      "kind": "skill",
+      "id": "skill_01LHyuDrDqj2xrT9wkQsk1tp",
+      "version": "skver_019Tk6RorrrttSPTUyhSy4zk",
+      "hash": "edb04f72738211b63c9021524031d7bd"
+    }
+  }
+}
